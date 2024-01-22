@@ -1,9 +1,9 @@
 {
-  "type": "module",
   "scripts": {
     "start": "echo hello world"
   },
   "dependencies": {
+    "@babel/core": "^7.23.7",
     "axios": "^1.6.2",
     "bignumber.js": "^9.1.2",
     "crypto-js": "^4.2.0",

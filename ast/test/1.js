@@ -60,6 +60,9 @@ traverse(ast, {
             arguments[i].remove();
         }
 
+        // 丢掉外层的自执行壳子
+        path.replaceWithMultiple(callee.node.body.body);
+
     }
 });
 
@@ -98,5 +101,7 @@ traverse(ast, {
         path.remove();
     }
 });
+
+
 let {code} = generator(ast,opts = {jsescOption:{"minimal":true}});
 console.log(code);
